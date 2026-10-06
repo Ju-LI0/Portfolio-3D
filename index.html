@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Júlio César | Portfólio 3D Interativo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+<div id="canvas-container"></div>
+
+<div id="top-bar">
+    <div class="ui-title">🎲 Júlio César | Portfólio 3D</div>
+    <button class="btn-recruiter" onclick="openRecruiterModal()">📄 Modo Recrutador (Texto)</button>
+</div>
+
+<div id="controls-hint">🎮 <strong>Controles:</strong> [WASD / Setas] Mover Avatar</div>
+<div id="interaction-prompt">Pressione [ESPAÇO] ou [E] para Interagir</div>
+
+<div id="touch-controls">
+    <div class="action-btn" id="btn-action">INTERAGIR</div>
+</div>
+
+<!-- Modal Dinâmica do Jogo -->
+<div id="infoModal" class="modal">
+    <div class="modal-header">
+        <div id="modalTitle" class="modal-title">Título</div>
+        <button class="close-btn" onclick="closeModal()">X</button>
+    </div>
+    <div id="modalBody" class="modal-body">Conteúdo...</div>
+</div>
+
+<!-- Modal Recrutador -->
+<div id="recruiterModal" class="modal">
+    <div class="modal-header">
+        <div class="modal-title">📄 Currículo Completo - Júlio César M. da Silva</div>
+        <button class="close-btn" onclick="closeRecruiterModal()">X</button>
+    </div>
+    <div class="modal-body">
+        <h3>Júlio César Mendes da Silva</h3>
+        <p>📍 Assis, SP | 📞 (11) 98973-7895 | ✉️ jcmsilva.1707@gmail.com</p>
+        <p>🔗 <a href="https://github.com/Ju-LI0" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/júlio-césar-mendes-da-silva-IA17" target="_blank">LinkedIn</a></p>
+        
+        <h4>🎯 Objetivo Profissional</h4>
+        <p>Iniciar trajetória em TI, aplicando conhecimentos do Ensino Médio Técnico em ADS e da graduação em Gestão da TI.</p>
+
+        <h4>💻 Habilidades Técnicas (Hard Skills)</h4>
+        <div>
+            <span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">HTML/CSS</span>
+            <span class="tag">SQL</span><span class="tag">Análise de Dados</span><span class="tag">Git / GitHub</span>
+            <span class="tag">Front-End</span><span class="tag">Back-End</span><span class="tag">Inteligência Artificial</span>
+            <span class="tag">Redes</span><span class="tag">Programação Mobile</span>
+        </div>
+
+        <h4>🧠 Habilidades Comportamentais (Soft Skills)</h4>
+        <p>Aprendizado contínuo, escuta ativa, empatia, inteligência emocional, resiliência e adaptabilidade.</p>
+
+        <h4>🎓 Formação Acadêmica</h4>
+        <ul>
+            <li><strong>Graduação em Gestão de TI:</strong> FATEC (Em andamento - 2º Semestre)</li>
+            <li><strong>Técnico em ADS:</strong> ETEC Amélia Araújo (Concluído 12/2025)</li>
+        </ul>
+
+        <h4>🗣️ Idiomas</h4>
+        <ul>
+            <li><strong>Inglês:</strong> Fluente C1 (UMC - Toronto, Canadá)</li>
+            <li><strong>Espanhol:</strong> Fluente C1 (Em andamento)</li>
+            <li><strong>Francês:</strong> Básico II A2 (Em andamento)</li>
+            <li><strong>Japonês:</strong> Básico II A2</li>
+        </ul>
+
+        <h4>🤝 Voluntariado & Projetos</h4>
+        <ul>
+            <li><strong>Cidadão Pró-Mundo (CPM):</strong> Professor de Inglês Voluntário (2026 - Atual)</li>
+            <li><strong>Escoteiros Yapira:</strong> Liderança e trabalho em equipe</li>
+        </ul>
+
+        <h4>📜 Cursos Extra-Curriculares</h4>
+        <ul>
+            <li><strong>CS50P - Python:</strong> Harvard University</li>
+            <li><strong>Trilha GenAI & Dados (52h):</strong> Fundação Bradesco & DIO</li>
+            <li><strong>Do Prompt ao Agente (35h):</strong> CI&T & DIO</li>
+            <li><strong>Do Excel ao SQL:</strong> Fundação Bradesco & DIO</li>
+        </ul>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
